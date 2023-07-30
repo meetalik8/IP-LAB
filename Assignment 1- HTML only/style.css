@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Pacifico&family=Patrick+Hand&display=swap');
+/* font-family: 'Bungee Spice', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Patrick Hand', cursive; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #000000;
+    --secondary-text-color: #ffffff;
+    --accent-color: #F29AD8;
+    --accent-color-dark: #EE71C3;
+    --vibrant-color:#E305AD;
+}
+
+body {
+    color: var(--primary-text-color);
+    font-family: 'Pacifico', cursive;
+    margin: 30px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+nav li{
+    margin: 0px 20px;
+    font-size: 18px;
+}
+li a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--primary-text-color);
+}
+li a:hover{
+    color: var(--vibrant-color);
+}
+li:first-of-type a{
+    color: var(--vibrant-color);
+}
+
+section {
+    border: 2px solid var(--primary-text-color);
+    margin: 20px;
+    background-color: var(--accent-color-dark);
+    min-height: 500px;
+    width: 1300;
+    box-shadow: 20px 20px #F29AD8;
+}
+
+section h1{
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    padding: 50px 0px 10px 50px;
+    font-size: 30px;
+}
+.name-para{
+    font-size: 30px;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    padding: 0px 0px 0px 100px;
+}
+.name {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+}
+.photo-text {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 20px 10px 0px 50px;
+}
+.photo img{
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.info {
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--secondary-text-color);
+    padding-top: 30px;
+}
+.arrow {
+    display: flex;
+    justify-content: flex-end;
+    /* align-items:last baseline; */
+    /* margin-top: 50px;
+    margin-bottom: 2px; */
+    margin: 50px 30px 0px 0px;
+    color: var(--primary-text-color);
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialmedia a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-size: 24px;
+    margin-top: 30px;
+}
