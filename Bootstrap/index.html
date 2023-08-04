@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Working on it</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Parisienne&display=swap" rel="stylesheet"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -16,11 +17,15 @@
         background-color: #1D1D1D;
         font-family: 'Poppins','sans-serif';
     }
+    .navbar-brand{
+      font-size: 20px;
+    }
     .navbar{
         background-color: #7F1414;
         color: #EAEFD3;
-        font-size: 15px;
+        font-size: 20px;
         border: #7F1414;
+        padding: 10px;
     }
     .navbar-nav li a{
         color: #EAEFD3 !important;
@@ -31,6 +36,9 @@
     .card-container {
       display: flex;
       justify-content: center;
+      /* margin: 10px; */
+      flex-wrap: wrap;
+      margin-bottom: 20px;
     }
     .card {
         background-color: #7F1414;
@@ -48,12 +56,43 @@
     .jumbotron p{
       color: #7F1414;
     }
-
+    .form-control{
+      background-color: #EAEFD3;
+    }
+    ul{
+      margin-left:15px;
+    }
+    .jumbotron p{
+      font-family: 'Vollkorn', serif;
+      font-weight: 1000;
+    }
+    .card-title{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .card{
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    #basics{
+      color: #EAEFD3;
+    }
+    .basics-section {
+      border-radius: 15px;
+      padding-left: 20px;
+      color: #EAEFD3;
+      background-color: #7F1414;
+      padding-bottom: 30px;
+      display: flex;
+    }
+    .basics-section p{
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
     <nav class="navbar navbar-default">
-        <div class="container">
+        <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
@@ -64,8 +103,8 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" class="nav-link">Basics</a></li>
-              <li><a href="#" class="nav-link">Method</a></li>
+              <li><a href="#basics" class="nav-link">Basics</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
               <!-- <li><a href="#" c></a></li> -->
             </ul>
           </div>
@@ -75,13 +114,13 @@
       <div class="jumbotron">
         <div class="container">
           <h1>Learn about first aid</h1>      
-          <p>Here you can learn the basics of first aid and history of first aid.</p>
+          <p>Here you can learn the basics of first aid and some history of first aid.</p>
         </div>
       </div>
 
-      <div class="container card-container">
+      <div class="container-fluid card-container">
         <div class="card mx-auto text-center" style="width: 300px">
-            <img src="static/whatisfirstaid.jpg" class="card-img-top" alt="..." style="width:260px;">
+            <img src="static/whatisfirstaid.jpg" class="card-img-top img-responsive" alt="..." style="width:260px;">
             <div class="card-body">
               <h5 class="card-title">What is First Aid?</h5>
               <p class="card-text">First aid is the first and immediate assistance given to any person 
@@ -90,7 +129,7 @@
             </div>
       </div>
       <div class="card mx-auto text-center" style="width: 300px">
-        <img src="static/historyoffirstaid.webp" class="card-img-top" alt="..." style="height: 200px;">
+        <img src="static/historyoffirstaid.webp" class="card-img-top img-responsive" alt="..." style="height: 190px;">
         <div class="card-body">
           <h5 class="card-title">History of first aid</h5>
           <p class="card-text">World First Aid Day can be charted back to a historical event 
@@ -100,17 +139,50 @@
         </div>
       </div>
       <div class="card mx-auto text-center" style="width: 300px">
-        <img src="static/whatisfirstaid.avif" class="card-img-top" alt="..." style="height: 200px;">
+        <img src="static/aimoffirstaid.jpeg" class="card-img-top img-responsive" alt="..." style="width: 260px;">
         <div class="card-body">
           <h5 class="card-title">Aim of First Aid</h5>
-          <p class="card-text">The primary goal of first aid is to prevent death or serious injury from worsening. 
+          <p class="card-text text-center">The primary goal of first aid is to prevent death or serious injury from worsening. 
             The key aims of first aid can be summarized with the acronym of 'the three Ps': 
-            <br> Preserve life <br>Prevent further harm <br> Promote recovery</p>
+            <ul class="text-left">
+              <li>Preserve life</li>
+              <li>Prevent further harm</li>
+              <li>Promote recovery</li>
+            </ul></p>
         </div>
         </div> 
       </div>
 
-      <div class="container contact-container">
+     <div class="container" id="basics">
+      <h1 class="text-center">The Basics</h1>
+      <div class="row basics-section">
+        <div class="col-sm-8">
+          <h2>The 3 C's</h2>
+          <h4>Check, Call, and Care</h4>
+          <p><strong>Check</strong><br> When providing first aid, the first step is to check the scene for 
+            any potential dangers that could harm you or the injured person. 
+            This includes checking for any hazardous materials, traffic, or other potential hazards. 
+            Once you have ensured that the area is safe, the next step is to check the person
+             for any injuries or illnesses. <br><br>
+            <strong>Call</strong><br>The second C in first aid is Call. 
+            Once you have checked the person for injuries or illnesses, 
+            the next step is to call for professional medical help. 
+            This may involve calling 101 or the local emergency services, depending on the severity of the situation.<br><br>
+            <strong>Care</strong><br>The final C in first aid is Care. Once you have checked the person 
+            for injuries or illnesses and called for medical help, the next step is to provide care to the person. 
+            This may involve providing basic first aid, such as bandaging a wound or administering medication.</p>
+          <!-- <button class="btn btn-default btn-lg">Get in Touch</button> -->
+        </div>
+        <div>
+          <img src="static/threecs.jpg" class="img-responsive img-left" alt="" width="350px" style="padding-top: 120px;">
+        </div>
+        <!-- <div class="col-sm-4">
+          <span class="glyphicon glyphicon-signal logo"></span>
+        </div> -->
+      </div>
+</div>
+
+      <div class="container contact-container" id="contact">
         <h2 class="text-center">Contact Us</h2>
         <div class="row">
           <div class="col-sm-5">
