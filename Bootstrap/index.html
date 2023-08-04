@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working on it</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+        /* color: #EAEFD3; */
+        background-color: #1D1D1D;
+        font-family: 'Poppins','sans-serif';
+    }
+    .navbar{
+        background-color: #7F1414;
+        color: #EAEFD3;
+        font-size: 15px;
+        border: #7F1414;
+    }
+    .navbar-nav li a{
+        color: #EAEFD3 !important;
+    }
+    .navbar-nav li a:hover{
+        color: #1D1D1D !important;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+        background-color: #7F1414;
+        padding: 20px;
+        color: #EAEFD3;
+        border-radius: 10px;
+        margin-right:30px;
+    }
+    .contact-container {
+      color: #EAEFD3;
+    }
+    .jumbotron {
+      background-color: #EAEFD3;
+    }
+    .jumbotron p{
+      color: #7F1414;
+    }
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#" style="color: #EAEFD3;">First Aid</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" class="nav-link">Basics</a></li>
+              <li><a href="#" class="nav-link">Method</a></li>
+              <!-- <li><a href="#" c></a></li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Learn about first aid</h1>      
+          <p>Here you can learn the basics of first aid and history of first aid.</p>
+        </div>
+      </div>
+
+      <div class="container card-container">
+        <div class="card mx-auto text-center" style="width: 300px">
+            <img src="static/whatisfirstaid.jpg" class="card-img-top" alt="..." style="width:260px;">
+            <div class="card-body">
+              <h5 class="card-title">What is First Aid?</h5>
+              <p class="card-text">First aid is the first and immediate assistance given to any person 
+                with either a minor or serious illness or injury,[1] with care provided to preserve life, 
+                prevent the condition from worsening, or to promote recovery until medical services arrive.</p>
+            </div>
+      </div>
+      <div class="card mx-auto text-center" style="width: 300px">
+        <img src="static/historyoffirstaid.webp" class="card-img-top" alt="..." style="height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">History of first aid</h5>
+          <p class="card-text">World First Aid Day can be charted back to a historical event 
+            which occurred in 1859. In June 1859, during the Battle of Solferino in Italy, 
+            a businessman from Geneva named Henry Dunant was witness to the petrifying and 
+            gruesome scenes of injured people in the war.</p>
+        </div>
+      </div>
+      <div class="card mx-auto text-center" style="width: 300px">
+        <img src="static/whatisfirstaid.avif" class="card-img-top" alt="..." style="height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">Aim of First Aid</h5>
+          <p class="card-text">The primary goal of first aid is to prevent death or serious injury from worsening. 
+            The key aims of first aid can be summarized with the acronym of 'the three Ps': 
+            <br> Preserve life <br>Prevent further harm <br> Promote recovery</p>
+        </div>
+        </div> 
+      </div>
+
+      <div class="container contact-container">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row">
+          <div class="col-sm-5">
+            <p>Contact us and we'll get back to you soon.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Mumbai, India</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> basicfirstaid@gmail.com</p>
+          </div>
+          <div class="col-sm-7">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-default pull-right" type="submit">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
