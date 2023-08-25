@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <section>
+        <header>
+            <h2 id="heading">I am learning DOM</h2>
+        </header>
+         <button onclick="changeHeading()">Click Me!</button>
+      </section>
+      <section>
+          <h2 id="shrinkage">Change CSS</h2>
+          <button onclick="getShrinked()">Change Me</button>
+      </section>
+      <section>
+          <h2 id="addMe">Click the button to count</h2>
+          <button onclick="countMe()">Press Me</button>
+          <button onclick="removeMe()">Remove</button>
+      </section>
+
+      <script>
+        const node = document.querySelector("h2");
+        node.style.backgroundColor = "#D282A6";
+
+        const nodeList = document.querySelectorAll("h2");
+        nodeList[1].style.backgroundColor="#6E4555";
+        nodeList[2].style.backgroundColor = "#E8B4BC";
+      </script>
+</body>
+</html>
