@@ -4,7 +4,8 @@ import './App.css';
 function App() {
   const [firstName, setFirstName]= useState('Meetali');
   const [lastName, setLastName]= useState('Kapse');
-  const [message, setMessage]= useState ('This is the message');
+  const [message, setMessage]= useState ('This is the message.');
+  
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
   };
@@ -29,7 +30,7 @@ function App() {
       <label htmlFor="message">Message: &nbsp;&nbsp;&nbsp;</label>
       <textarea name="message" id="message" cols="30" rows="5" value={message} onChange={handleMessage}></textarea>
       <div className='display'>
-        <h2>First Name: {firstName} <br/> Last Name: {lastName}</h2>
+        <h3>First Name: {firstName} <br/>Last Name: {lastName}</h3>
         <p>Message: {message}</p>
       </div>
     </div>
