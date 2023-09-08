@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI Pokémon List</title>
+</head>
+<body>
+    <button id="fetchPokemonList">Fetch Pokémon List</button>
+    <ul id="pokemonList"></ul>
+
+    <script>
+        function fetchPokemonList() {
+            const pokemonListElement = document.getElementById('pokemonList');
+            fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const pokemonArray = data.results;
+                    const listItems = pokemonArray.map(pokemon => `<li>${pokemon.name}</li>`);
+                    pokemonListElement.innerHTML = listItems.join('');
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+        const fetchButton = document.getElementById('fetchPokemonList');
+        fetchButton.addEventListener('click', fetchPokemonList);
+    </script>
+</body>
+</html>

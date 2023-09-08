@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
 
@@ -8,6 +7,7 @@ class App extends Component {
     this.state = {
       name: "",
       password: "",
+      gender: "",
       currentStat: false,
     };
   }
@@ -63,7 +63,27 @@ class App extends Component {
               onChange={this.handlePassword}
             />{" "}
             <br />
-            <button type="submit" onClick={this.handleSubmit}>Submit It</button>
+            <label htmlFor="gender">Gender: &nbsp;&nbsp;</label>
+            <input
+              type="radio"
+              name="gender"
+              id="gender"
+              value={this.state.gender}
+            />
+            Male
+            <input
+              type="radio"
+              name="gender"
+              id="gender"
+              value={this.state.gender}
+            />
+            Female
+            <br />
+            <button type="submit" onClick={this.handleSubmit}>
+              Submit It
+            </button>{" "}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="reset">Reset</button>
           </form>
         ) : (
           <div>
